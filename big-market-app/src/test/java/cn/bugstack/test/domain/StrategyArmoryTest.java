@@ -1,6 +1,7 @@
 package cn.bugstack.test.domain;
 
 import cn.bugstack.domain.strategy.service.armory.IStrategyArmory;
+import cn.bugstack.domain.strategy.service.armory.IStrategyDispatch;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,9 @@ public class StrategyArmoryTest {
     @Resource
     private IStrategyArmory strategyArmory;
 
+    @Resource
+    private IStrategyDispatch strategyDispatch;
+
 
     @Test
     public void test_strategyArmory() {
@@ -33,12 +37,12 @@ public class StrategyArmoryTest {
 
     @Test
     public void test_getAssembleRandomVal() {
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
-        log.info("测试结果: {} - 奖品ID值", strategyArmory.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
+        log.info("测试结果: {} - 奖品ID值", strategyDispatch.getRandomAwardId(100002L));
     }
 }
