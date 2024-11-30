@@ -8,6 +8,7 @@ import java.time.Duration;
 
 /**
  * Redis 服务 - Redisson
+ *
  * @author Fuzhengwei bugstack.cn @小傅哥
  */
 @Service("redissonService")
@@ -95,6 +96,11 @@ public class RedissonService implements IRedisService {
         return list.get(index);
     }
 
+    @Override
+    public <K, V> RMap<K, V> getMap(String key) {
+        return redissonClient.getMap(key);
+    }
+
     public void addToMap(String key, String field, String value) {
         RMap<String, String> map = redissonClient.getMap(key);
         map.put(field, value);
@@ -109,13 +115,6 @@ public class RedissonService implements IRedisService {
     public <K, V> V getFromMap(String key, K field) {
         return redissonClient.<K, V>getMap(key).get(field);
     }
-
-
-    @Override
-    public <K, V> K getMap(String key) {
-        return (K) redissonClient.<K, V>getMap(key);
-    }
-
 
     public void addToSortedSet(String key, String value) {
         RSortedSet<String> sortedSet = redissonClient.getSortedSet(key);

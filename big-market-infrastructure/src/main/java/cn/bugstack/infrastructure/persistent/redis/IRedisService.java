@@ -4,6 +4,7 @@ import org.redisson.api.*;
 
 /**
  * Redis 服务
+ *
  * @author Fuzhengwei bugstack.cn @小傅哥
  */
 public interface IRedisService {
@@ -55,7 +56,7 @@ public interface IRedisService {
      * 延迟队列
      *
      * @param rBlockingQueue 加锁队列
-     * @param <T> 泛型
+     * @param <T>            泛型
      * @return 队列
      */
     <T> RDelayedQueue<T> getDelayedQueue(RBlockingQueue<T> rBlockingQueue);
@@ -143,6 +144,14 @@ public interface IRedisService {
     String getFromList(String key, int index);
 
     /**
+     * 获取Map
+     *
+     * @param key 键
+     * @return 值
+     */
+    <K, V> RMap<K, V> getMap(String key);
+
+    /**
      * 将指定的键值对添加到哈希表中
      *
      * @param key   键
@@ -169,7 +178,12 @@ public interface IRedisService {
      */
     <K, V> V getFromMap(String key, K field);
 
-    <K, V> K getMap(String key);
+    /**
+     * 将指定的值添加到有序集合中
+     *
+     * @param key   键
+     * @param value 值
+     */
     void addToSortedSet(String key, String value);
 
     /**
