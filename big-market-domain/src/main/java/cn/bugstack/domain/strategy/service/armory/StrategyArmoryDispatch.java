@@ -34,17 +34,23 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     public boolean assembleLotteryStrategy(Long strategyId) {
         // 1. 查询策略配置
         List<StrategyAwardEntity> strategyAwardEntities = repository.queryStrategyAwardList(strategyId);
+        System.out.println("strategyAwardEntities: " + strategyAwardEntities);
+
 
         assembleLotteryStrategy(String.valueOf(strategyId), strategyAwardEntities);
 
         // 2.权重策略配置  -  适用于 rule_weight 权重规则配置
 
         StrategyEntity strategyEntity = repository.queryStrategyEntityByStrategyId(strategyId);
+        System.out.println("strategyEntity: " + strategyEntity);
         String ruleWeight = strategyEntity.getRuleWeight();
+        System.out.println("ruleWeight: " + ruleWeight);
 
         if (null == ruleWeight) return true;
 
         StrategyRuleEntity strategyRuleEntity = repository.queryStrategyRule(strategyId, ruleWeight);
+        System.out.println("strategyRuleEntity: " + strategyRuleEntity);
+
         if (null == strategyRuleEntity) {
             throw new AppException(ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getCode(), ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getInfo());
         }

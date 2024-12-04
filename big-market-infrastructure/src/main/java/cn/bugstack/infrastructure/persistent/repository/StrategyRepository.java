@@ -3,6 +3,7 @@ package cn.bugstack.infrastructure.persistent.repository;
 import cn.bugstack.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.bugstack.domain.strategy.model.entity.StrategyEntity;
 import cn.bugstack.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.bugstack.domain.strategy.model.vo.StrategyAwardRuleModelVO;
 import cn.bugstack.domain.strategy.repository.IStrategyRepository;
 import cn.bugstack.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.bugstack.infrastructure.persistent.dao.IStrategyDao;
@@ -99,11 +100,34 @@ public class StrategyRepository implements IStrategyRepository {
 
     @Override
     public StrategyEntity queryStrategyEntityByStrategyId(Long strategyId) {
+        // 检查 redisService 是否为 null
+        if (redisService == null) {
+            log.error("redisService is null");
+            throw new IllegalStateException("redisService is not initialized");
+        }
+
+
         // 优先从缓存中获取
         String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
         StrategyEntity strategyEntity = redisService.getValue(cacheKey);
         if (null != strategyEntity) return strategyEntity;
+
+
+        // 检查 strategyDao 是否为 null
+        if (strategyDao == null) {
+            log.error("strategyDao is null");
+            throw new IllegalStateException("strategyDao is not initialized");
+        }
+
         Strategy strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+
+        // 检查 strategy 是否为 null
+        if (strategy == null) {
+            log.warn("Strategy not found for strategyId: {}", strategyId);
+            return null; // 或者抛出异常，取决于业务逻辑
+        }
+
+
         strategyEntity = StrategyEntity.builder()
                 .strategyId(strategy.getStrategyId())
                 .strategyDesc(strategy.getStrategyDesc())
@@ -137,5 +161,14 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setAwardId(awardId);
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModel(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }
