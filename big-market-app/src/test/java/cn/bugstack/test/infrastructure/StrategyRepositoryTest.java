@@ -30,7 +30,7 @@ public class StrategyRepositoryTest {
     @Test
     public void queryRuleTreeVOByTreeId() {
 
-        RuleTreeVO ruleTreeVO = strategyRepository.queryRuleTreeVOByTreeId("tree_lock");
+        RuleTreeVO ruleTreeVO = strategyRepository.queryRuleTreeVOByTreeId("tree_lock_1");
         log.info("测试结果：{}", JSON.toJSONString(ruleTreeVO));
 
     }

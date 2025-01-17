@@ -8,8 +8,8 @@ import cn.bugstack.domain.strategy.service.IRaffleStrategy;
 import cn.bugstack.domain.strategy.service.armory.IStrategyArmory;
 import cn.bugstack.trigger.api.IRaffleService;
 import cn.bugstack.trigger.api.dto.RaffleAwardListRequestDTO;
-import cn.bugstack.trigger.api.dto.RaffleAwardListResponseDTO;
 import cn.bugstack.trigger.api.dto.RaffleRequestDTO;
+import cn.bugstack.trigger.api.dto.RaffleAwardListResponseDTO;
 import cn.bugstack.trigger.api.dto.RaffleResponseDTO;
 import cn.bugstack.types.enums.ResponseCode;
 import cn.bugstack.types.exception.AppException;
@@ -23,10 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author: JarvanW
- * @Date: 2024/12/18
- * @Description:
- * @Requirements:
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 营销抽奖服务
+ * @create 2024-02-14 09:21
  */
 @Slf4j
 @RestController()
@@ -35,47 +34,48 @@ import java.util.List;
 public class IRaffleController implements IRaffleService {
 
     @Resource
-    private IStrategyArmory strategyArmory;
-
-    @Resource
     private IRaffleAward raffleAward;
-
     @Resource
     private IRaffleStrategy raffleStrategy;
+    @Resource
+    private IStrategyArmory strategyArmory;
 
     /**
      * 策略装配，将策略信息装配到缓存中
+     * <a href="http://localhost:8091/api/v1/raffle/strategy_armory">/api/v1/raffle/strategy_armory</a>
+     *
      * @param strategyId 策略ID
-     * @return
+     * @return 装配结果
      */
-
     @RequestMapping(value = "strategy_armory", method = RequestMethod.GET)
     @Override
-    public Response<Boolean> strategyArmory(Long strategyId) {
+    public Response<Boolean> strategyArmory(@RequestParam Long strategyId) {
         try {
-            log.info("抽奖策略装配开始 strategyId:{}", strategyId);
+            log.info("抽奖策略装配开始 strategyId：{}", strategyId);
             boolean armoryStatus = strategyArmory.assembleLotteryStrategy(strategyId);
             Response<Boolean> response = Response.<Boolean>builder()
                     .code(ResponseCode.SUCCESS.getCode())
                     .info(ResponseCode.SUCCESS.getInfo())
                     .data(armoryStatus)
                     .build();
-            log.info("抽奖策略装配完成 strategyId:{} response:{}", strategyId, JSON.toJSONString(response));
+            log.info("抽奖策略装配完成 strategyId：{} response: {}", strategyId, JSON.toJSONString(response));
             return response;
         } catch (Exception e) {
-            log.error("抽奖策略装配失败 strategyId:{}", strategyId);
+            log.error("抽奖策略装配失败 strategyId：{}", strategyId, e);
             return Response.<Boolean>builder()
                     .code(ResponseCode.UN_ERROR.getCode())
                     .info(ResponseCode.UN_ERROR.getInfo())
                     .build();
         }
-
     }
 
     /**
+     * 查询奖品列表
+     * <a href="http://localhost:8091/api/v1/raffle/query_raffle_award_list">/api/v1/raffle/query_raffle_award_list</a>
+     * 请求参数 raw json
      *
-     * @param requestDTO 抽奖奖品列表查询请求参数
-     * @return
+     * @param requestDTO {"strategyId":1000001}
+     * @return 奖品列表
      */
     @RequestMapping(value = "query_raffle_award_list", method = RequestMethod.POST)
     @Override
@@ -89,7 +89,7 @@ public class IRaffleController implements IRaffleService {
                 raffleAwardListResponseDTOS.add(RaffleAwardListResponseDTO.builder()
                         .awardId(strategyAward.getAwardId())
                         .awardTitle(strategyAward.getAwardTitle())
-                        .awardSubtitle(strategyAward.getAwardSubTitle())
+                        .awardSubtitle(strategyAward.getAwardSubtitle())
                         .sort(strategyAward.getSort())
                         .build());
             }
@@ -110,10 +110,12 @@ public class IRaffleController implements IRaffleService {
         }
     }
 
-
     /**
-     * @param requestDTO 抽奖请求参数
-     * @return
+     * 随机抽奖接口
+     * <a href="http://localhost:8091/api/v1/raffle/random_raffle">/api/v1/raffle/random_raffle</a>
+     *
+     * @param requestDTO 请求参数 {"strategyId":1000001}
+     * @return 抽奖结果
      */
     @RequestMapping(value = "random_raffle", method = RequestMethod.POST)
     @Override
