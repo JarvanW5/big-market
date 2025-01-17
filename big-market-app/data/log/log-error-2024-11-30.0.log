@@ -1,0 +1,2 @@
+24-11-30.15:21:31.056 [main            ] ERROR StrategyRepository     - Rate range not found for key: big_market_strategy_rate_range_key_100001_4000:102,103,104,105
+24-11-30.15:21:57.235 [main            ] ERROR StrategyRepository     - Rate range not found for key: big_market_strategy_rate_range_key_100001_4000:102,103,104,105

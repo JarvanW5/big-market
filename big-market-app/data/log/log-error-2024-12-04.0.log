@@ -1,0 +1,7 @@
+24-12-04.11:27:09.617 [main            ] WARN  StrategyRepository     - Strategy not found for strategyId: 100002
+24-12-04.11:29:24.555 [main            ] WARN  StrategyRepository     - Strategy not found for strategyId: 100002
+24-12-04.11:30:15.435 [main            ] WARN  StrategyRepository     - Strategy not found for strategyId: 100003
+24-12-04.11:30:46.134 [main            ] WARN  StrategyRepository     - Strategy not found for strategyId: 100003
+24-12-04.21:05:20.204 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s330ms375µs699ns).
+24-12-04.21:31:10.731 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m14s631ms197µs400ns).
+24-12-04.21:32:31.118 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s712ms868µs200ns).
