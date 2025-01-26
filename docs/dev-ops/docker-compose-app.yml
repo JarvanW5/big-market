@@ -2,7 +2,7 @@ version: '3.8'
 # 命令执行 docker-compose -f docker-compose-app.yml up -d
 services:
   big-market-app:
-    image: jarvan01/big-market-app:1.0
+    image: jarvan01/big-market-app:1.2
     container_name: big-market-app
     restart: always
     ports:
@@ -30,14 +30,13 @@ services:
         max-file: "3"
   big-market-front-app:
     container_name: big-market-front-app
-    image: jarvan01/big-market-front-app:1.1
+    image: jarvan01/big-market-front-app:1.2
     restart: always
     networks:
       - my-network
     ports:
       - 3000:3000
     environment:
-#      - API_HOST_URL=http://10.16.158.102:8091      # 本机
       - API_HOST_URL=http://117.72.49.107:8091      # 京东云服务器
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     healthcheck:
