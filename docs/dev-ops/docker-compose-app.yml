@@ -30,14 +30,14 @@ services:
         max-file: "3"
   big-market-front-app:
     container_name: big-market-front-app
-    image: jarvan01/big-market-front-app:1.2
+    image: jarvan01/big-market-front-app:1.3
     restart: always
     networks:
       - my-network
     ports:
       - 3000:3000
     environment:
-      - API_HOST_URL=http://117.72.49.107:8091      # 京东云服务器
+      - API_HOST_URL=http://117.72.49.107:8091      # 京东云
       - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     healthcheck:
       test: [ "CMD", "wget", "--spider", "-q", "http://0.0.0.0:3000/" ]
