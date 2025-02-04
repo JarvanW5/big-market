@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author JarvanW
+ * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 抽奖活动单 持久化对象
  * @create 2024-03-02 13:21
  */
@@ -21,6 +21,11 @@ public class RaffleActivityOrder {
      * 用户ID
      */
     private String userId;
+
+    /**
+     * sku
+     */
+    private Long sku;
 
     /**
      * 活动ID
@@ -66,6 +71,11 @@ public class RaffleActivityOrder {
      * 订单状态
      */
     private String state;
+
+    /**
+     * 业务仿重ID - 外部透传的，确保幂等
+     */
+    private String outBusinessNo;
 
     /**
      * 创建时间
