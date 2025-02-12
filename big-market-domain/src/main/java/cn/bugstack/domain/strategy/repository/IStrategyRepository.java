@@ -3,11 +3,10 @@ package cn.bugstack.domain.strategy.repository;
 import cn.bugstack.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.bugstack.domain.strategy.model.entity.StrategyEntity;
 import cn.bugstack.domain.strategy.model.entity.StrategyRuleEntity;
-import cn.bugstack.domain.strategy.model.vo.RuleTreeVO;
-import cn.bugstack.domain.strategy.model.vo.StrategyAwardRuleModelVO;
-import cn.bugstack.domain.strategy.model.vo.StrategyAwardStockKeyVO;
+import cn.bugstack.domain.strategy.model.valobj.RuleTreeVO;
+import cn.bugstack.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
+import cn.bugstack.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -83,11 +82,29 @@ public interface IStrategyRepository {
     void updateStrategyAwardStock(Long strategyId, Integer awardId);
 
     /**
-     * 根据策略ID+奖品ID的唯一值组合,查询奖品信息
+     * 根据策略ID+奖品ID的唯一值组合，查询奖品信息
      *
      * @param strategyId 策略ID
      * @param awardId    奖品ID
      * @return 奖品信息
      */
     StrategyAwardEntity queryStrategyAwardEntity(Long strategyId, Integer awardId);
+
+    /**
+     * 查询策略ID
+     *
+     * @param activityId 活动ID
+     * @return 策略ID
+     */
+    Long queryStrategyIdByActivityId(Long activityId);
+
+    /**
+     * 查询用户抽奖次数 - 当天的；策略ID:活动ID 1:1 的配置，可以直接用 strategyId 查询。
+     *
+     * @param userId     用户ID
+     * @param strategyId 策略ID
+     * @return 用户今日参与次数
+     */
+    Integer queryTodayUserRaffleCount(String userId, Long strategyId);
+
 }

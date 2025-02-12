@@ -1,6 +1,6 @@
 package cn.bugstack.domain.strategy.service.rule.tree.factory.engine.impl;
 
-import cn.bugstack.domain.strategy.model.vo.*;
+import cn.bugstack.domain.strategy.model.valobj.*;
 import cn.bugstack.domain.strategy.service.rule.tree.ILogicTreeNode;
 import cn.bugstack.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.bugstack.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;

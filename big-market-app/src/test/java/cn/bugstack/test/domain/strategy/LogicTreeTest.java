@@ -1,6 +1,6 @@
 package cn.bugstack.test.domain.strategy;
 
-import cn.bugstack.domain.strategy.model.vo.*;
+import cn.bugstack.domain.strategy.model.valobj.*;
 import cn.bugstack.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;
 import cn.bugstack.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import com.alibaba.fastjson2.JSON;

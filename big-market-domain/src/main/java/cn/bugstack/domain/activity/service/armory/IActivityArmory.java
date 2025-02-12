@@ -1,10 +1,13 @@
 package cn.bugstack.domain.activity.service.armory;
 
-
 /**
- * 活动装配预热
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 活动装配预热
+ * @create 2024-03-30 09:09
  */
 public interface IActivityArmory {
+
+    boolean assembleActivitySkuByActivityId(Long activityId);
 
     boolean assembleActivitySku(Long sku);
 

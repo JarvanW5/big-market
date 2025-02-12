@@ -1,6 +1,6 @@
 package cn.bugstack.domain.strategy.service;
 
-import cn.bugstack.domain.strategy.model.vo.StrategyAwardStockKeyVO;
+import cn.bugstack.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥

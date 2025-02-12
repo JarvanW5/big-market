@@ -29,6 +29,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
     // 抽奖的决策树 -> 负责抽奖中到抽奖后的规则过滤，如抽奖到A奖品ID，之后要做次数的判断和库存的扣减等。
     protected final DefaultTreeFactory defaultTreeFactory;
 
+    // 为什么 Spring 推荐使用构造注入；https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html
     public AbstractRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
         this.repository = repository;
         this.strategyDispatch = strategyDispatch;
@@ -49,10 +50,8 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         DefaultChainFactory.StrategyAwardVO chainStrategyAwardVO = raffleLogicChain(userId, strategyId);
         log.info("抽奖策略计算-责任链 {} {} {} {}", userId, strategyId, chainStrategyAwardVO.getAwardId(), chainStrategyAwardVO.getLogicModel());
         if (!DefaultChainFactory.LogicModel.RULE_DEFAULT.getCode().equals(chainStrategyAwardVO.getLogicModel())) {
-            // TODO: awardConfig 暂时为空，黑名单指定积分奖品，后续需要在库表中配置上对应的1积分值，并获取到。
-            return RaffleAwardEntity.builder()
-                    .awardId(chainStrategyAwardVO.getAwardId())
-                    .build();
+            // TODO awardConfig 暂时为空。黑名单指定积分奖品，后续需要在库表中配置上对应的1积分值，并获取到。
+            return buildRaffleAwardEntity(strategyId, chainStrategyAwardVO.getAwardId(), null);
         }
 
         // 3. 规则树抽奖过滤【奖品ID，会根据抽奖次数判断、库存判断、兜底兜里返回最终的可获得奖品信息】
@@ -67,11 +66,11 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         StrategyAwardEntity strategyAward = repository.queryStrategyAwardEntity(strategyId, awardId);
         return RaffleAwardEntity.builder()
                 .awardId(awardId)
+                .awardTitle(strategyAward.getAwardTitle())
                 .awardConfig(awardConfig)
                 .sort(strategyAward.getSort())
                 .build();
     }
-
 
     /**
      * 抽奖计算，责任链抽象方法

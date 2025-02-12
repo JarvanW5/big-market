@@ -2,7 +2,7 @@ package cn.bugstack.test.domain.strategy;
 
 import cn.bugstack.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.bugstack.domain.strategy.model.entity.RaffleFactorEntity;
-import cn.bugstack.domain.strategy.model.vo.StrategyAwardStockKeyVO;
+import cn.bugstack.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.bugstack.domain.strategy.service.IRaffleStock;
 import cn.bugstack.domain.strategy.service.IRaffleStrategy;
 import cn.bugstack.domain.strategy.service.armory.IStrategyArmory;
