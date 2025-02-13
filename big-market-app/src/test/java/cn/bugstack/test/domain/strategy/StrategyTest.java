@@ -1,12 +1,5 @@
 package cn.bugstack.test.domain.strategy;
 
-/**
- * @Author: JarvanW
- * @Date: 2024/11/30
- * @Description:
- * @Requirements:
- */
-
 import cn.bugstack.domain.strategy.service.armory.IStrategyArmory;
 import cn.bugstack.domain.strategy.service.armory.IStrategyDispatch;
 import cn.bugstack.infrastructure.persistent.redis.IRedisService;
@@ -42,7 +35,7 @@ public class StrategyTest {
      */
     @Before
     public void test_strategyArmory() {
-        boolean success = strategyArmory.assembleLotteryStrategy(100001L);
+        boolean success = strategyArmory.assembleLotteryStrategy(100005L);
         log.info("测试结果：{}", success);
     }
 
