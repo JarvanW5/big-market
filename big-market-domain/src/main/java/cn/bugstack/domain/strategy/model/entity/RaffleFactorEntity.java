@@ -5,14 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
- * @Author: JarvanW
- * @Date: 2024/12/2
- * @Description: 抽奖因子实体
- * @Requirements:
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 抽奖因子实体
+ * @create 2024-01-06 09:20
  */
-
-
 @Data
 @Builder
 @AllArgsConstructor
@@ -23,7 +22,7 @@ public class RaffleFactorEntity {
     private String userId;
     /** 策略ID */
     private Long strategyId;
-    /** 奖品ID */
-    private Integer awardId;
+    /** 结束时间 */
+    private Date endDateTime;
 
 }
