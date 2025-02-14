@@ -65,6 +65,10 @@ public class DefaultChainFactory {
          * 抽奖逻辑模型
          */
         private String logicModel;
+        /**
+         * 抽奖奖品规则
+         */
+        private String awardRuleValue;
     }
 
 
