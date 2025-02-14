@@ -2,21 +2,16 @@ package cn.bugstack.infrastructure.persistent.po;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * @Author: JarvanW
- * @Date: 2025/2/3
- * @Description: 抽奖活动sku持久化对象
- * @Requirements:
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 抽奖活动sku持久化对象
+ * @create 2024-03-16 10:54
  */
 @Data
 public class RaffleActivitySku {
-
-    /**
-     * 自增ID
-     */
-    private Long id;
 
     /**
      * 商品sku
@@ -39,6 +34,10 @@ public class RaffleActivitySku {
      */
     private Integer stockCountSurplus;
     /**
+     * 商品金额【积分】
+     */
+    private BigDecimal productAmount;
+    /**
      * 创建时间
      */
     private Date createTime;
@@ -49,4 +48,3 @@ public class RaffleActivitySku {
     private Date updateTime;
 
 }
-

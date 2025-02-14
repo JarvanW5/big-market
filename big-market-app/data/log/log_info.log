@@ -463,3 +463,36 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'x
 25-02-14.22:15:45.177 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
 25-02-14.22:15:45.177 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
 25-02-14.22:15:45.177 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-02-14.22:52:22.823 [main            ] INFO  RaffleActivityAccountQuotaServiceTest - Starting RaffleActivityAccountQuotaServiceTest using Java 1.8.0_231 on JarvanW-Lenovo with PID 20496 (started by JarvanW in D:\JarvanW\workplace\java_work\big-market\big-market-app)
+25-02-14.22:52:22.824 [main            ] INFO  RaffleActivityAccountQuotaServiceTest - The following 1 profile is active: "dev"
+25-02-14.22:52:23.509 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-02-14.22:52:23.510 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-02-14.22:52:23.545 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+25-02-14.22:52:24.742 [main            ] INFO  Version                - Redisson 3.23.4
+25-02-14.22:52:25.252 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-02-14.22:52:25.268 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-02-14.22:52:28.012 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-02-14.22:52:28.101 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+25-02-14.22:52:28.157 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#71e2c6d8:0/SimpleConnection@4ff0706c [delegate=amqp://admin@127.0.0.1:5672/, localPort= 52812]
+25-02-14.22:52:28.278 [main            ] INFO  RaffleActivityAccountQuotaServiceTest - Started RaffleActivityAccountQuotaServiceTest in 5.711 seconds (JVM running for 6.315)
+25-02-14.22:52:28.473 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-02-14.22:52:28.620 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-02-14.22:52:28.696 [main            ] INFO  RaffleActivityAccountQuotaServiceTest - 装配活动：true
+25-02-14.22:52:28.704 [main            ] INFO  ActivityBaseActionChain - 活动责任链-基础信息【有效期、状态、库存(sku)】校验开始。sku:9011 activityId:100301
+25-02-14.22:52:28.704 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】开始。sku:9011 activityId:100301
+25-02-14.22:52:28.708 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】成功。sku:9011 activityId:100301
+25-02-14.22:52:28.735 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-02-14.22:52:28.751 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-02-14.22:52:28.767 [main            ] INFO  RaffleActivityAccountQuotaServiceTest - 测试结果：546846210788
+25-02-14.22:52:28.778 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-02-14.22:52:28.779 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-02-14.22:52:28.780 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-02-14.22:52:28.781 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-02-14.22:52:29.239 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-02-14.22:52:29.252 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-02-14.22:52:29.267 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-02-14.22:52:29.267 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-02-14.22:52:29.270 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-02-14.22:52:29.271 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-02-14.22:52:29.271 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-02-14.22:52:29.271 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
