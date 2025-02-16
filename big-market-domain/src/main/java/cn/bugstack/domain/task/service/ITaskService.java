@@ -5,7 +5,7 @@ import cn.bugstack.domain.task.model.entity.TaskEntity;
 import java.util.List;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 消息任务服务接口
  * @create 2024-04-06 10:49
  */

@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 行为返利服务仓储实现
  * @create 2024-04-30 16:21
  */

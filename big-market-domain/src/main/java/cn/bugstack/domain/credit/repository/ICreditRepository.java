@@ -4,7 +4,7 @@ import cn.bugstack.domain.credit.model.aggregate.TradeAggregate;
 import cn.bugstack.domain.credit.model.entity.CreditAccountEntity;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户积分仓储
  * @create 2024-06-01 09:11
  */

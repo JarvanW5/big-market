@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户行为返利流水订单表 持久化对象
  * @create 2024-04-30 13:43
  */

@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户积分流水单
  * @create 2024-06-01 08:48
  */

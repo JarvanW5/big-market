@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 抽奖活动表Dao
  * @create 2024-03-09 10:04
  */

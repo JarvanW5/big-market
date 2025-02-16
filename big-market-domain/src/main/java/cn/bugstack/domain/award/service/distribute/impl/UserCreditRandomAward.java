@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户积分奖品，支持 award_config 透传，满足黑名单积分奖励。
  * @create 2024-05-18 08:53
  */

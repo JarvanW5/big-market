@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 发送MQ消息任务队列
  * @create 2024-04-06 10:47
  */

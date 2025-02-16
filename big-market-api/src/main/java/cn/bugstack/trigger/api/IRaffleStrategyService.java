@@ -6,7 +6,7 @@ import cn.bugstack.types.model.Response;
 import java.util.List;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 抽奖服务接口
  * @create 2024-02-14 09:33
  */

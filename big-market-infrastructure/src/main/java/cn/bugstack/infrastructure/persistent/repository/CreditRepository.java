@@ -30,7 +30,7 @@ import java.math.BigDecimal;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户积分仓储
  * @create 2024-06-01 10:07
  */

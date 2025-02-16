@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 积分账户调整成功消息【充值、支付，成功消息】
  * @create 2024-06-08 19:19
  */

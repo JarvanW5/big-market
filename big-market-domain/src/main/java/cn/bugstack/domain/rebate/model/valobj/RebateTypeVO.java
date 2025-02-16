@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 返利类型（sku 活动库存充值商品、integral 用户活动积分）
  * @create 2024-05-01 14:09
  */

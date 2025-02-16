@@ -3,7 +3,7 @@ package cn.bugstack.domain.activity.service.armory;
 import java.util.Date;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 活动调度【扣减库存】
  * @create 2024-03-30 09:28
  */

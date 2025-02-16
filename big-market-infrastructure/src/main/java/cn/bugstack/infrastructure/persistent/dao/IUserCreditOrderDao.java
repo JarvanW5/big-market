@@ -7,7 +7,7 @@ import cn.bugstack.middleware.db.router.annotation.DBRouterStrategy;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户积分流水单 DAO
  * @create 2024-06-01 08:55
  */

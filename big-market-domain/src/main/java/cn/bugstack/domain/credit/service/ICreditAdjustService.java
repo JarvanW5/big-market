@@ -4,7 +4,7 @@ import cn.bugstack.domain.credit.model.entity.CreditAccountEntity;
 import cn.bugstack.domain.credit.model.entity.TradeEntity;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 积分调额接口【正逆向，增减积分】
  * @create 2024-06-01 09:35
  */

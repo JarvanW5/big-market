@@ -3,7 +3,7 @@ package cn.bugstack.trigger.api.dto;
 import lombok.Data;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 用户活动账户请求对象
  * @create 2024-05-03 07:17
  */

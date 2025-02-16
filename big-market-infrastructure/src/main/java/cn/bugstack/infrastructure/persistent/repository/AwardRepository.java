@@ -27,7 +27,7 @@ import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 奖品仓储服务
  * @create 2024-04-06 10:09
  */

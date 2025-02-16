@@ -4,7 +4,7 @@ import cn.bugstack.domain.activity.model.entity.PartakeRaffleActivityEntity;
 import cn.bugstack.domain.activity.model.entity.UserRaffleOrderEntity;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 抽奖活动参与服务
  * @create 2024-04-04 19:50
  */

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Redis 服务
  *
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  */
 public interface IRedisService {
 

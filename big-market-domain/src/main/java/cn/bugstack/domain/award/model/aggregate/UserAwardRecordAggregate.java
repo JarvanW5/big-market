@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Author: JarvanW
+ * @author @JarvanW
  * @Date: 2025/2/7
  * @Description: 用户中奖记录聚合对象 【聚合代表一个事务操作】
  * @Requirements:

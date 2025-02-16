@@ -5,7 +5,7 @@ import cn.bugstack.middleware.db.router.annotation.DBRouter;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 抽奖活动账户表
  * @create 2024-03-09 10:05
  */

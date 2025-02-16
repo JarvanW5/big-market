@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 奖品服务
  * @create 2024-04-06 09:39
  */

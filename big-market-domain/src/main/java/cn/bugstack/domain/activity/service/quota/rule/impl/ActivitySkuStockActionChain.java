@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author @JarvanW
  * @description 商品库存规则节点
  * @create 2024-03-23 10:25
  */
